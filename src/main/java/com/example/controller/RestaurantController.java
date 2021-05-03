@@ -41,6 +41,12 @@ public class RestaurantController {
 		 return restaurantService.getAllRestaurants();
 		
 	    }
+	 
+	 @GetMapping("/generatedata")
+	    public List<Restaurant> generatedata() {
+		 return restaurantService.populatedata();
+		
+	    }
 
 	 @GetMapping("/findRestaurant/{rest_id}")
 	    public Optional<Restaurant> findRestaurant(@PathVariable  ("rest_id") int rest_id) {
